@@ -25,14 +25,14 @@
                                 <rect key="frame" x="0.0" y="94.5" width="375" height="572.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="238" id="12D-Qf-zOJ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customcell" rowHeight="238" id="12D-Qf-zOJ" customClass="ProjetosTableViewCell" customModule="BeachMapMobile" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="238"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="12D-Qf-zOJ" id="0Sl-IK-CAe">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="238"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome do projeto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqs-TY-zg2">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Nome do projeto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqs-TY-zg2">
                                                     <rect key="frame" x="25" y="21" width="129" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="Oev-gX-hMv"/>
@@ -41,8 +41,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Escritório" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ba2-Jy-kMt">
-                                                    <rect key="frame" x="292" y="21" width="73" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Escritório" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ba2-Jy-kMt">
+                                                    <rect key="frame" x="243" y="21" width="122" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="Wi7-cx-WlL"/>
                                                     </constraints>
@@ -93,12 +93,17 @@
                                                 <constraint firstItem="fg4-5c-eq5" firstAttribute="top" secondItem="Ou0-AU-RCu" secondAttribute="bottom" constant="10" id="Vua-QC-jVr"/>
                                                 <constraint firstItem="gCE-b0-XdG" firstAttribute="leading" secondItem="0Sl-IK-CAe" secondAttribute="leadingMargin" constant="10" id="dW1-A1-poT"/>
                                                 <constraint firstItem="iqs-TY-zg2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0Sl-IK-CAe" secondAttribute="leadingMargin" id="eaN-fK-vkV"/>
-                                                <constraint firstItem="Ba2-Jy-kMt" firstAttribute="leading" secondItem="iqs-TY-zg2" secondAttribute="trailing" constant="138" id="k83-wL-2vT"/>
                                                 <constraint firstItem="61N-h1-sha" firstAttribute="top" secondItem="iqs-TY-zg2" secondAttribute="bottom" constant="20" id="mA0-rM-ttD"/>
                                                 <constraint firstAttribute="trailing" secondItem="Ba2-Jy-kMt" secondAttribute="trailing" constant="10" id="pUP-Hj-NpT"/>
                                                 <constraint firstItem="61N-h1-sha" firstAttribute="leading" secondItem="0Sl-IK-CAe" secondAttribute="leadingMargin" constant="20" id="qkL-tO-0wH"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="Descricao" destination="61N-h1-sha" id="ng2-b2-fQE"/>
+                                            <outlet property="Escritorio" destination="Ba2-Jy-kMt" id="LZM-Zf-zxJ"/>
+                                            <outlet property="Nome" destination="iqs-TY-zg2" id="Ug6-YE-kvc"/>
+                                            <outlet property="Responsaveis" destination="fg4-5c-eq5" id="AbP-qz-xXa"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -124,6 +129,9 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tabelaProjetos" destination="oNK-4X-Cjb" id="99s-Yb-CTg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
