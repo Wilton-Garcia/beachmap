@@ -19,3 +19,8 @@ def test_quando_listar_projetos_retorno_deve_ser_uma_lista():
     cliente = TestClient(app)
     resposta = cliente.get("/projetos")
     assert isinstance(resposta.json(), list)
+
+def test_quando_listar_projetos_retorno_deve_ser_uma_lista2():
+    cliente = TestClient(app)
+    resposta = cliente.get("/projetos")
+    assert isinstance(resposta.json(), list)
