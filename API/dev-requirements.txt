@@ -1,3 +1,0 @@
--r requirements.txt
-pytest==5.3.2
-httpie==1.0.3
