@@ -16,4 +16,7 @@ class ProjetosTableViewCell: UITableViewCell {
     @IBOutlet weak var Descricao: UITextView!
     @IBOutlet weak var Responsaveis: UILabel!
     
+    @IBOutlet weak var ViewInfo: UIView!
+    
+
 }

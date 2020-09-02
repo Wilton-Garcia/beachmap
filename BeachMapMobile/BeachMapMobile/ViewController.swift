@@ -23,6 +23,9 @@ class ViewController: UIViewController{
         
         tabelaProjetos.delegate = self
         tabelaProjetos.dataSource = self
+        
+    
+
     }
     
     
@@ -44,6 +47,18 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
         cell.Escritorio.text = projeto.escritorio
         cell.Descricao.text = projeto.descricao
         cell.Responsaveis.attributedText = stringResponsaveisProjetosFormatada
+        
+        //cell.layer.contentView.frame = UIEdgeInsetsInsetRect(contentView.frame,  UIEdgeInsetsMake(0, 0, 10, 0))
+        
+        cell.ViewInfo.layer.cornerRadius = 10
+        cell.ViewInfo.layer.masksToBounds = true
+        
+        cell.ViewInfo.backgroundColor = UIColor.clear
+        cell.ViewInfo.layer.shadowColor = UIColor.darkGray.cgColor
+        cell.ViewInfo.layer.shadowOffset = CGSize(width: 10.0, height: 10.0)
+        cell.ViewInfo.layer.shadowOpacity = 1.0
+        cell.ViewInfo.layer.shadowRadius = 2
+        
         
         return cell
         
