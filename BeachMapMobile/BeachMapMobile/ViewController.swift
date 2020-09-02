@@ -56,7 +56,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        cell.contentView.layer.shadowColor = UIColor.darkGray.cgColor
+        cell.contentView.layer.shadowColor = UIColor.systemGray4.cgColor
         cell.contentView.layer.shadowOffset = CGSize(width: 3.0, height: 3.0)
         cell.contentView.layer.shadowOpacity = 1.0
         cell.contentView.layer.shadowRadius = 5
