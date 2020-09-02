@@ -50,7 +50,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        return 230
     }
     
     func formataStringResponsaveis(responsaveis: String) -> NSAttributedString {

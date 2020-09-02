@@ -72,11 +72,11 @@
 				79E670BA24F69A4F007500E9 /* AppDelegate.swift */,
 				79E670BC24F69A4F007500E9 /* SceneDelegate.swift */,
 				79E670BE24F69A4F007500E9 /* ViewController.swift */,
+				4D597D4B24F6A6B500BD3906 /* ProjetosTableViewCell.swift */,
 				79E670C024F69A4F007500E9 /* Main.storyboard */,
 				79E670C324F69A52007500E9 /* Assets.xcassets */,
 				79E670C524F69A52007500E9 /* LaunchScreen.storyboard */,
 				79E670C824F69A52007500E9 /* Info.plist */,
-				4D597D4B24F6A6B500BD3906 /* ProjetosTableViewCell.swift */,
 			);
 			path = BeachMapMobile;
 			sourceTree = "<group>";
