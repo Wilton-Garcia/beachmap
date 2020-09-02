@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController{
     
     let projetos = [
-        Projeto(id: 0, nome: "Projeto Exemplo 1", escritorio: "Belo Horizonte", descricao: "orem Ipslon Lorem IpslonLorem Ipslon Lorem IpslonLorem Ipslon Lorem IpslonLorem Ipslon Lorem IpslonLorem Ipslon Lorem IpslonLorem Ipslon Lorem IpslonLorem Ipslon ", responsaveis: "vitor.prites@email.com,  wilton.garcia@email.com, wilton.garcia@email.com"),
+        Projeto(id: 0, nome: "Projeto Exemplo 1", escritorio: "Belo Horizonte", descricao: "Lorem Ipslon Lorem IpslonLorem Ipslon Lorem IpslonLorem Ipslon Lorem IpslonLorem Ipslon Lorem IpslonLorem Ipslon Lorem IpslonLorem Ipslon Lorem IpslonLorem Ipslon Lorem IpslonLorem Ipslon Lorem IpslonLorem Ipslon Lorem IpslonLorem Ipslon Lorem IpslonLorem Ipslon ", responsaveis: "vitor.prites@email.com,  wilton.garcia@email.com, wilton.garcia@email.com"),
         Projeto(id: 1, nome: "Projeto Exemplo 2", escritorio: "Recife", descricao: "Lorem Ipslon Lorem Lorem Ipslon Lorem IpslonLorem Ipslon Lorem IpslonLorem Ipslon Lorem IpslonLorem Ipslon Lorem IpslonLorem Ipslon Lorem IpslonLorem Ipslon Lorem IpslonLorem Ipslon Lorem IpslonLorem Ipslon Lorem ", responsaveis: "wilton.garcia@email.com")
         
     ]
@@ -24,8 +24,8 @@ class ViewController: UIViewController{
         tabelaProjetos.delegate = self
         tabelaProjetos.dataSource = self
         
-    
-
+        
+        
     }
     
     
@@ -48,25 +48,24 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
         cell.Descricao.text = projeto.descricao
         cell.Responsaveis.attributedText = stringResponsaveisProjetosFormatada
         
-        //cell.layer.contentView.frame = UIEdgeInsetsInsetRect(contentView.frame,  UIEdgeInsetsMake(0, 0, 10, 0))
-        
         cell.ViewInfo.layer.cornerRadius = 10
         cell.ViewInfo.layer.masksToBounds = true
-        
-        cell.ViewInfo.backgroundColor = UIColor.clear
-        cell.ViewInfo.layer.shadowColor = UIColor.darkGray.cgColor
-        cell.ViewInfo.layer.shadowOffset = CGSize(width: 10.0, height: 10.0)
-        cell.ViewInfo.layer.shadowOpacity = 1.0
-        cell.ViewInfo.layer.shadowRadius = 2
-        
         
         return cell
         
     }
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.contentView.layer.shadowColor = UIColor.darkGray.cgColor
+        cell.contentView.layer.shadowOffset = CGSize(width: 3.0, height: 3.0)
+        cell.contentView.layer.shadowOpacity = 1.0
+        cell.contentView.layer.shadowRadius = 5
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 230
     }
+    
     
     func formataStringResponsaveis(responsaveis: String) -> NSAttributedString {
         

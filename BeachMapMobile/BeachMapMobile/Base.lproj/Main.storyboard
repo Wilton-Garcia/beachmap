@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bKd-bu-c1M">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bKd-bu-c1M">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -54,10 +55,10 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="61N-h1-sha">
-                                                            <rect key="frame" x="10" y="41" width="325" height="80"/>
+                                                            <rect key="frame" x="10" y="41" width="325" height="68"/>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="80" id="BBW-hO-gGw"/>
+                                                                <constraint firstAttribute="height" constant="68" id="BBW-hO-gGw"/>
                                                             </constraints>
                                                             <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
                                                             <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -65,14 +66,14 @@
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                         </textView>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ou0-AU-RCu">
-                                                            <rect key="frame" x="15" y="136" width="308" height="1"/>
+                                                            <rect key="frame" x="15" y="124" width="308" height="1"/>
                                                             <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="1" id="YCP-0Q-OyY"/>
                                                             </constraints>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email@email.com" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fg4-5c-eq5">
-                                                            <rect key="frame" x="10" y="147" width="325" height="18"/>
+                                                            <rect key="frame" x="10" y="140" width="325" height="18"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -87,7 +88,7 @@
                                                         <constraint firstItem="fg4-5c-eq5" firstAttribute="leading" secondItem="HYv-bd-dc4" secondAttribute="leading" constant="10" id="W98-ja-eDo"/>
                                                         <constraint firstAttribute="trailing" secondItem="Ba2-Jy-kMt" secondAttribute="trailing" constant="10" id="bA0-C8-m4M"/>
                                                         <constraint firstItem="Ou0-AU-RCu" firstAttribute="top" secondItem="61N-h1-sha" secondAttribute="bottom" constant="15" id="dDc-pq-xgp"/>
-                                                        <constraint firstItem="fg4-5c-eq5" firstAttribute="top" secondItem="Ou0-AU-RCu" secondAttribute="bottom" constant="10" id="fdt-pE-yhf"/>
+                                                        <constraint firstItem="fg4-5c-eq5" firstAttribute="top" secondItem="Ou0-AU-RCu" secondAttribute="bottom" constant="15" id="fdt-pE-yhf"/>
                                                         <constraint firstAttribute="trailing" secondItem="61N-h1-sha" secondAttribute="trailing" constant="10" id="hWn-Vx-hK7"/>
                                                         <constraint firstAttribute="trailing" secondItem="Ou0-AU-RCu" secondAttribute="trailing" constant="22" id="jrD-7D-Xx0"/>
                                                         <constraint firstItem="Ou0-AU-RCu" firstAttribute="leading" secondItem="HYv-bd-dc4" secondAttribute="leading" constant="15" id="kOa-XR-IlF"/>
@@ -133,6 +134,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add Projeto"/>
                             </button>
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -151,6 +153,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aBO-im-l90">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" name="beach_map_primary"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -162,4 +166,9 @@
             <point key="canvasLocation" x="132" y="136.28185907046478"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="beach_map_primary">
+            <color red="0.10980392156862745" green="0.070588235294117646" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
