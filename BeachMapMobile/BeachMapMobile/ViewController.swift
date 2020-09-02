@@ -23,8 +23,23 @@ class ViewController: UIViewController{
         
         tabelaProjetos.delegate = self
         tabelaProjetos.dataSource = self
+        AdicionaNavBar()
         
         
+    }
+    
+    func AdicionaNavBar () {
+        
+        
+        
+
+        
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+        imageView.contentMode = .scaleAspectFit
+      //  imageView.addConstraint(NSLayoutConstraint(item: imageView, attribute: NSLayoutConstraint.Attribute.centerY, relatedBy: NSLayoutConstraint.Relation.equal, toItem: <#T##Any?#>, attribute: <#T##NSLayoutConstraint.Attribute#>, multiplier: 10, constant: 10))
+        let image = UIImage(named: "beachmap")
+        imageView.image = image
+        navigationItem.titleView = imageView
         
     }
     
@@ -63,15 +78,21 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
         return 230
+        
+        
+        
     }
     
     
     func formataStringResponsaveis(responsaveis: String) -> NSAttributedString {
         
+        let tamanhoFonte =  UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.phone ? CGFloat(16) : CGFloat(19)
+
         let boldText = "Responsáveis: "
-        let attributsBold = [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 16, weight: .bold)]
-        let attributsNormal = [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 16, weight: .regular)]
+        let attributsBold = [NSAttributedString.Key.font : UIFont.systemFont(ofSize: tamanhoFonte, weight: .bold)]
+        let attributsNormal = [NSAttributedString.Key.font : UIFont.systemFont(ofSize: tamanhoFonte, weight: .regular)]
         let attributedString = NSMutableAttributedString(string: responsaveis, attributes:attributsNormal)
         let boldStringPart = NSMutableAttributedString(string: boldText, attributes:attributsBold)
         
