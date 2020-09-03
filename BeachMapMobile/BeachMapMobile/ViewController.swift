@@ -41,6 +41,8 @@ class ViewController: UIViewController{
     }
     
     
+    
+    
 }
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate{
@@ -80,8 +82,6 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
         
         return 230
         
-        
-        
     }
     
     
@@ -99,6 +99,14 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
         
         return boldStringPart
         
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row)
+        
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyBoard.instantiateViewController(identifier: "detalhes") as! DetalhesViewController
+        navigationController?.pushViewController(controller, animated: true)
     }
     
 }

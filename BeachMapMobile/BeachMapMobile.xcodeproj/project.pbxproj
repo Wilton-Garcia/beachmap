@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4D597D4A24F6A40000BD3906 /* Projeto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D597D4924F6A40000BD3906 /* Projeto.swift */; };
 		4D597D4C24F6A6B500BD3906 /* ProjetosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D597D4B24F6A6B500BD3906 /* ProjetosTableViewCell.swift */; };
+		4D8486F825012EE500CFBCEE /* DetalhesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8486F725012EE500CFBCEE /* DetalhesViewController.swift */; };
 		79E670BB24F69A4F007500E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E670BA24F69A4F007500E9 /* AppDelegate.swift */; };
 		79E670BD24F69A4F007500E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E670BC24F69A4F007500E9 /* SceneDelegate.swift */; };
 		79E670BF24F69A4F007500E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E670BE24F69A4F007500E9 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		4D597D4924F6A40000BD3906 /* Projeto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Projeto.swift; sourceTree = "<group>"; };
 		4D597D4B24F6A6B500BD3906 /* ProjetosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjetosTableViewCell.swift; sourceTree = "<group>"; };
+		4D8486F725012EE500CFBCEE /* DetalhesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesViewController.swift; sourceTree = "<group>"; };
 		79E670B724F69A4F007500E9 /* BeachMapMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeachMapMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79E670BA24F69A4F007500E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79E670BC24F69A4F007500E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				79E670C324F69A52007500E9 /* Assets.xcassets */,
 				79E670C524F69A52007500E9 /* LaunchScreen.storyboard */,
 				79E670C824F69A52007500E9 /* Info.plist */,
+				4D8486F725012EE500CFBCEE /* DetalhesViewController.swift */,
 			);
 			path = BeachMapMobile;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 			files = (
 				79E670BF24F69A4F007500E9 /* ViewController.swift in Sources */,
 				4D597D4A24F6A40000BD3906 /* Projeto.swift in Sources */,
+				4D8486F825012EE500CFBCEE /* DetalhesViewController.swift in Sources */,
 				4D597D4C24F6A6B500BD3906 /* ProjetosTableViewCell.swift in Sources */,
 				79E670BB24F69A4F007500E9 /* AppDelegate.swift in Sources */,
 				79E670BD24F69A4F007500E9 /* SceneDelegate.swift in Sources */,
