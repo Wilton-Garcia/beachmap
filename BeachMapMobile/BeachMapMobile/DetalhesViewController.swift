@@ -10,10 +10,16 @@ import UIKit
 
 class DetalhesViewController: UIViewController {
 
+    @IBOutlet weak var nomeProjetoLbl: UILabel!
+    
+    var nomeProjetoSelecionado: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if let  nomeProjeto = nomeProjetoSelecionado {
+            nomeProjetoLbl.text = nomeProjeto
+        }
     }
     
 

@@ -103,9 +103,10 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.row)
-        
+        let nomeProjetoSelecionado = projetos[indexPath.row].nome
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyBoard.instantiateViewController(identifier: "detalhes") as! DetalhesViewController
+        controller.nomeProjetoSelecionado = nomeProjetoSelecionado
         navigationController?.pushViewController(controller, animated: true)
     }
     

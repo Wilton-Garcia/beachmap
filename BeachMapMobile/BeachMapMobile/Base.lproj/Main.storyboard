@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bKd-bu-c1M">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bKd-bu-c1M">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -97,6 +97,7 @@
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="fg4-5c-eq5" secondAttribute="trailing" constant="10" id="F3q-C0-BJp"/>
+                                                        <constraint firstItem="Ba2-Jy-kMt" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="iqs-TY-zg2" secondAttribute="trailing" constant="8" symbolic="YES" id="Lg7-uj-Mpg"/>
                                                         <constraint firstItem="61N-h1-sha" firstAttribute="leading" secondItem="HYv-bd-dc4" secondAttribute="leading" constant="10" id="RyQ-sf-hCn"/>
                                                         <constraint firstItem="iqs-TY-zg2" firstAttribute="top" secondItem="HYv-bd-dc4" secondAttribute="top" constant="10" id="Sbl-qx-9q7"/>
                                                         <constraint firstItem="61N-h1-sha" firstAttribute="top" secondItem="iqs-TY-zg2" secondAttribute="bottom" constant="10" id="T0y-wL-GOs"/>
@@ -145,7 +146,6 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="2bW-7j-OKv">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="chevron.left" catalog="system" id="xPw-GN-0bZ"/>
                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="WJ0-Ob-QzY"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -164,9 +164,24 @@
                     <view key="view" contentMode="scaleToFill" id="I1d-2x-6fF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIr-ks-R2c">
+                                <rect key="frame" x="186" y="357.66666666666669" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="dIr-ks-R2c" firstAttribute="centerX" secondItem="I1d-2x-6fF" secondAttribute="centerX" id="def-ES-QvT"/>
+                            <constraint firstItem="dIr-ks-R2c" firstAttribute="centerY" secondItem="I1d-2x-6fF" secondAttribute="centerY" id="tlN-jr-ONo"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="jcu-Fe-epz"/>
                     </view>
+                    <connections>
+                        <outlet property="nomeProjetoLbl" destination="dIr-ks-R2c" id="czH-f6-HJZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sr8-SU-Fgl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -194,7 +209,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <namedColor name="beach_map_primary">
             <color red="0.10980392156862745" green="0.070588235294117646" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
