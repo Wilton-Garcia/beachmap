@@ -18,5 +18,6 @@ class ProjetosTableViewCell: UITableViewCell {
     
     @IBOutlet weak var ViewInfo: UIView!
     
-
+    @IBOutlet weak var textView: UITextView!
+    
 }

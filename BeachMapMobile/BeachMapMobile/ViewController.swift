@@ -31,14 +31,9 @@ class ViewController: UIViewController{
     }
     
     func AdicionaNavBar () {
-        
-        
-        
 
-        
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
         imageView.contentMode = .scaleAspectFit
-      //  imageView.addConstraint(NSLayoutConstraint(item: imageView, attribute: NSLayoutConstraint.Attribute.centerY, relatedBy: NSLayoutConstraint.Relation.equal, toItem: <#T##Any?#>, attribute: <#T##NSLayoutConstraint.Attribute#>, multiplier: 10, constant: 10))
         let image = UIImage(named: "beachmap")
         imageView.image = image
         navigationItem.titleView = imageView
@@ -67,6 +62,8 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
         
         cell.ViewInfo.layer.cornerRadius = 10
         cell.ViewInfo.layer.masksToBounds = true
+        
+        cell.textView.textContainer.lineBreakMode = NSLineBreakMode.byTruncatingTail
         
         return cell
         
