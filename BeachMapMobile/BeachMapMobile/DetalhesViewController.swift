@@ -12,12 +12,12 @@ class DetalhesViewController: UIViewController {
 
     @IBOutlet weak var nomeProjetoLbl: UILabel!
     
-    var nomeProjetoSelecionado: String?
+    var nomeProjetoSelecionado: Projeto?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let  nomeProjeto = nomeProjetoSelecionado {
+        if let  nomeProjeto = nomeProjetoSelecionado?.nome {
             nomeProjetoLbl.text = nomeProjeto
         }
     }
