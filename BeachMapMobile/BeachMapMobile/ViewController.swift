@@ -8,9 +8,16 @@
 
 import UIKit
 
-class ViewController: UIViewController{
+class ViewController: UIViewController, ProjetosAPIDelegate{
+    func atualizarProjeto(projetos: [Projeto]) {
+        self.projetos = projetos
+        tabelaProjetos.reloadData()
+    }
     
-    let projetos = ProjetosDAO().retornaProjetos()
+    
+    var projetos:[Projeto] = []
+    var projetosAPI = ProjetosAPI()
+    
     
     @IBOutlet weak var tabelaProjetos: UITableView!
     
@@ -20,8 +27,11 @@ class ViewController: UIViewController{
         tabelaProjetos.delegate = self
         tabelaProjetos.dataSource = self
         AdicionaNavBar()
+        projetosAPI.delegate = self
+        projetosAPI.getData()
     }
     
+  
     func AdicionaNavBar () {
 
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
@@ -35,6 +45,7 @@ class ViewController: UIViewController{
 extension ViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("\(projetos.count) Teste")
         return projetos.count
     }
     
@@ -89,7 +100,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
+        //print(indexPath.row)
         let projetoSelecionado = projetos[indexPath.row]
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyBoard.instantiateViewController(identifier: "detalhes") as! DetalhesViewController

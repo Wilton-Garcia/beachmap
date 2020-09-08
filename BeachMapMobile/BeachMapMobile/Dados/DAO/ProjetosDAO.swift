@@ -23,7 +23,7 @@ class ProjetosDAO {
                                 * Firebase
                                 * Google Analytics
                                 """,
-                    oportunidades: [.XD, .BA], status: .EmProgresso,
+                    oportunidades: ["B.A."], status: "Em Progresso",
                     dataUltimaAtualizacao: "10/06/2020"),
             Projeto(id: 1, nome: "BeachMap",
                     escritorio: "Belo Horizonte",
@@ -43,7 +43,7 @@ class ProjetosDAO {
                             * CSS Modules
                             * Pytest
                             """,
-                    oportunidades: [.XD, .DEV, .QA], status: .EmProgresso,
+                    oportunidades: ["XD"], status: "Em progresso",
                     dataUltimaAtualizacao: "06/08/2020"),
             Projeto(id: 2, nome: "Atendo em Libras",
             escritorio: "BRASIL",
@@ -56,7 +56,7 @@ class ProjetosDAO {
                     * Jest
                     * React Testing Library
                     """,
-            oportunidades: [.XD, .DEV, .QA, .DEV], status: .EmProgresso,
+            oportunidades: ["Dev"], status: "Em progresso",
             dataUltimaAtualizacao: "31/08/2020")
         ]
         
