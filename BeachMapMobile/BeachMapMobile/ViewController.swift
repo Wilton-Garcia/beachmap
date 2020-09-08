@@ -10,13 +10,7 @@ import UIKit
 
 class ViewController: UIViewController{
     
-    let projetos = [
-        Projeto(id: 0, nome: "Projeto Exemplo 1", escritorio: "Belo Horizonte", descricao: "Lorem Ipslon Lorem IpslonLorem Ipslon Lorem IpslonLorem Ipslon Lorem IpslonLorem Ipslon Lorem IpslonLorem Ipslon Lorem IpslonLorem Ipslon Lorem IpslonLorem Ipslon Lorem IpslonLorem Ipslon Lorem IpslonLorem Ipslon Lorem IpslonLorem Ipslon Lorem IpslonLorem Ipslon ", responsaveis: "vitor.prites@email.com,  wilton.garcia@email.com, wilton.garcia@email.com"),
-        Projeto(id: 1, nome: "Projeto Exemplo 2", escritorio: "Recife", descricao: "Lorem Ipslon Lorem Lorem Ipslon Lorem IpslonLorem Ipslon Lorem IpslonLorem Ipslon Lorem IpslonLorem Ipslon Lorem IpslonLorem Ipslon Lorem IpslonLorem Ipslon Lorem IpslonLorem Ipslon Lorem IpslonLorem Ipslon Lorem ", responsaveis: "wilton.garcia@email.com"),
-        Projeto(id: 2, nome: "Projeto Exemplo 3", escritorio: "Belo Horizonte", descricao: "Lorem Ipslon Lorem IpslonLorem Ipslon Lorem IpslonLorem Ipslon Lorem IpslonLorem Ipslon Lorem IpslonLorem Ipslon Lorem IpslonLorem Ipslon Lorem IpslonLorem Ipslon Lorem IpslonLorem Ipslon Lorem IpslonLorem Ipslon Lorem IpslonLorem Ipslon Lorem IpslonLorem Ipslon ", responsaveis: "vitor.prites@email.com,  wilton.garcia@email.com, wilton.garcia@email.com"),
-        Projeto(id: 4, nome: "Projeto Exemplo 4", escritorio: "Recife", descricao: "Lorem Ipslon Lorem Lorem Ipslon Lorem IpslonLorem Ipslon Lorem Ip3lonLorem Ipslon Lorem IpslonLorem Ipslon Lorem IpslonLorem Ipslon Lorem IpslonLorem Ipslon Lorem IpslonLorem Ipslon Lorem IpslonLorem Ipslon Lorem ", responsaveis: "wilton.garcia@email.com")
-        
-    ]
+    let projetos = ProjetosDAO().retornaProjetos()
     
     @IBOutlet weak var tabelaProjetos: UITableView!
     
@@ -26,8 +20,6 @@ class ViewController: UIViewController{
         tabelaProjetos.delegate = self
         tabelaProjetos.dataSource = self
         AdicionaNavBar()
-        
-        
     }
     
     func AdicionaNavBar () {
@@ -37,12 +29,7 @@ class ViewController: UIViewController{
         let image = UIImage(named: "beachmap")
         imageView.image = image
         navigationItem.titleView = imageView
-        
     }
-    
-    
-    
-    
 }
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate{
@@ -103,10 +90,10 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.row)
-        let nomeProjetoSelecionado = projetos[indexPath.row]
+        let projetoSelecionado = projetos[indexPath.row]
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyBoard.instantiateViewController(identifier: "detalhes") as! DetalhesViewController
-        controller.nomeProjetoSelecionado = nomeProjetoSelecionado
+        controller.projetoSelecionado = projetoSelecionado
         navigationController?.pushViewController(controller, animated: true)
     }
     
