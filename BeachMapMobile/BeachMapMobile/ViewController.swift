@@ -9,28 +9,31 @@
 import UIKit
 
 class ViewController: UIViewController, ProjetosAPIDelegate{
-    func atualizarProjeto(projetos: [Projeto]) {
-        self.projetos = projetos
-        tabelaProjetos.reloadData()
-    }
-    
-    
-    var projetos:[Projeto] = []
-    var projetosAPI = ProjetosAPI()
-    
-    
     @IBOutlet weak var tabelaProjetos: UITableView!
     
+    var projetosAPI = ProjetosAPI()
+    var projetos = [Projeto]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.tabelaProjetos.reloadData()
+            }
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        projetosAPI.delegate = self
+        projetosAPI.getData()
         tabelaProjetos.delegate = self
         tabelaProjetos.dataSource = self
         AdicionaNavBar()
-        projetosAPI.delegate = self
-        projetosAPI.getData()
+         self.tabelaProjetos.reloadData()
     }
     
+    func atualizarProjeto(projetos: [Projeto]) {
+        self.projetos = projetos
+    }
   
     func AdicionaNavBar () {
 

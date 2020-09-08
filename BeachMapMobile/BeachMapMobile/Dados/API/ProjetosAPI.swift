@@ -12,7 +12,7 @@ protocol ProjetosAPIDelegate {
     func atualizarProjeto(projetos: [Projeto])
 }
 
-class ProjetosAPI{
+struct ProjetosAPI{
     
     var delegate: ProjetosAPIDelegate?
     
@@ -27,12 +27,14 @@ class ProjetosAPI{
                 
                 if let safeData = data {
                     let decode = JSONDecoder()
-                    do {let decoderData = try decode.decode([Projeto].self, from: safeData)
+                    do {
+                        let decoderData = try decode.decode([Projeto].self, from: safeData)
                         self.delegate?.atualizarProjeto(projetos: decoderData)
                     }
-                    catch {print(ProjetosDAO().retornaProjetos())}
+                    catch {
+                        print("Error")
+                    }
                 }
-                
             }
             task.resume()
         }
