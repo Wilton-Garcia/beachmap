@@ -1,6 +1,6 @@
 from starlette.testclient import TestClient
 from starlette.status import HTTP_200_OK
-from beachmap.gerenciador_projetos.projetos import app
+from gerenciador_projetos.projetos import app
 
 
 def test_API_retorna_200():
