@@ -9,7 +9,7 @@
 import UIKit
 
 class DetalhesViewController: UIViewController {
-
+    
     @IBOutlet weak var nomeProjetoLbl: UILabel!
     @IBOutlet weak var statusLbl: UILabel!
     @IBOutlet weak var escritorioLbl: UILabel!
@@ -24,18 +24,17 @@ class DetalhesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         if let  projeto = projetoSelecionado {
             nomeProjetoLbl.text = projeto.nome
             statusLbl.text = projeto.status.rawValue
             escritorioLbl.text = projeto.escritorio
-            dataUltimaAtualizacaoLbl.text = projeto.dataUltimaAtualizacao
+            dataUltimaAtualizacaoLbl.text = formataData(data: projeto.dataUltimaAtualizacao)
             descricaoLbl.text = projeto.descricao
             desafiosLbl.text = projeto.desafios
             techStackLbl.text = projeto.techStack
             oportunidadesLbl.text = retornaOportunidades(oportunidades: projeto.oportunidades)
             responsaveisLbl.text = projeto.responsaveis
-            
         }
     }
     
@@ -48,5 +47,7 @@ class DetalhesViewController: UIViewController {
         return oportunidadeRetorno
     }
     
-    
+    func formataData(data:String) -> String {
+        return "Data da última atualização: \(data)"
+    }
 }
