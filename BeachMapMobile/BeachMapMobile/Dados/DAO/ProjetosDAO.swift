@@ -23,7 +23,7 @@ class ProjetosDAO {
                                 * Firebase
                                 * Google Analytics
                                 """,
-                    oportunidades: ["B.A."], status: "Em Progresso",
+                    oportunidades: ["B.A.", "XD"], status: "emProgresso",
                     dataUltimaAtualizacao: "10/06/2020"),
             Projeto(id: 1, nome: "BeachMap",
                     escritorio: "Belo Horizonte",
