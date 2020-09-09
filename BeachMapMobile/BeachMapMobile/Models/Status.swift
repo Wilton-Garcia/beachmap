@@ -8,9 +8,10 @@
 
 import Foundation
 
+
 enum Status : String {
     
-    case EmProgresso = "Em Progresso"
+    case emProgresso = "Em Progresso"
     case Rascunho = "Rascunho"
     case Deletado = "Deletado"
     case Parado = "Parado"
