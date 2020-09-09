@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		460B555B2509606F003D49FC /* BeachMapMobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460B555A2509606F003D49FC /* BeachMapMobileTests.swift */; };
 		46A9867C2508109E0086835E /* ProjetosAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A9867B2508109E0086835E /* ProjetosAPI.swift */; };
 		4D597D4A24F6A40000BD3906 /* Projeto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D597D4924F6A40000BD3906 /* Projeto.swift */; };
 		4D597D4C24F6A6B500BD3906 /* ProjetosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D597D4B24F6A6B500BD3906 /* ProjetosTableViewCell.swift */; };
@@ -22,7 +23,20 @@
 		79E670C724F69A52007500E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79E670C524F69A52007500E9 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		460B555D2509606F003D49FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79E670AF24F69A4F007500E9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79E670B624F69A4F007500E9;
+			remoteInfo = BeachMapMobile;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		460B55582509606F003D49FC /* BeachMapMobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeachMapMobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		460B555A2509606F003D49FC /* BeachMapMobileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeachMapMobileTests.swift; sourceTree = "<group>"; };
+		460B555C2509606F003D49FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46A9867B2508109E0086835E /* ProjetosAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjetosAPI.swift; sourceTree = "<group>"; };
 		4D597D4924F6A40000BD3906 /* Projeto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Projeto.swift; sourceTree = "<group>"; };
 		4D597D4B24F6A6B500BD3906 /* ProjetosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjetosTableViewCell.swift; sourceTree = "<group>"; };
@@ -41,6 +55,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		460B55552509606F003D49FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		79E670B424F69A4F007500E9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -51,6 +72,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		460B55592509606F003D49FC /* BeachMapMobileTests */ = {
+			isa = PBXGroup;
+			children = (
+				460B555A2509606F003D49FC /* BeachMapMobileTests.swift */,
+				460B555C2509606F003D49FC /* Info.plist */,
+			);
+			path = BeachMapMobileTests;
+			sourceTree = "<group>";
+		};
 		46A9867D250810B90086835E /* Dados */ = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				79E670B924F69A4F007500E9 /* BeachMapMobile */,
+				460B55592509606F003D49FC /* BeachMapMobileTests */,
 				79E670B824F69A4F007500E9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -98,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				79E670B724F69A4F007500E9 /* BeachMapMobile.app */,
+				460B55582509606F003D49FC /* BeachMapMobileTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -123,6 +155,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		460B55572509606F003D49FC /* BeachMapMobileTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 460B555F2509606F003D49FC /* Build configuration list for PBXNativeTarget "BeachMapMobileTests" */;
+			buildPhases = (
+				460B55542509606F003D49FC /* Sources */,
+				460B55552509606F003D49FC /* Frameworks */,
+				460B55562509606F003D49FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				460B555E2509606F003D49FC /* PBXTargetDependency */,
+			);
+			name = BeachMapMobileTests;
+			productName = BeachMapMobileTests;
+			productReference = 460B55582509606F003D49FC /* BeachMapMobileTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		79E670B624F69A4F007500E9 /* BeachMapMobile */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 79E670CB24F69A52007500E9 /* Build configuration list for PBXNativeTarget "BeachMapMobile" */;
@@ -146,10 +196,14 @@
 		79E670AF24F69A4F007500E9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1160;
+				LastSwiftUpdateCheck = 1170;
 				LastUpgradeCheck = 1160;
 				ORGANIZATIONNAME = "LAVitor Pires";
 				TargetAttributes = {
+					460B55572509606F003D49FC = {
+						CreatedOnToolsVersion = 11.7;
+						TestTargetID = 79E670B624F69A4F007500E9;
+					};
 					79E670B624F69A4F007500E9 = {
 						CreatedOnToolsVersion = 11.6;
 					};
@@ -169,11 +223,19 @@
 			projectRoot = "";
 			targets = (
 				79E670B624F69A4F007500E9 /* BeachMapMobile */,
+				460B55572509606F003D49FC /* BeachMapMobileTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		460B55562509606F003D49FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		79E670B524F69A4F007500E9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -187,6 +249,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		460B55542509606F003D49FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				460B555B2509606F003D49FC /* BeachMapMobileTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		79E670B324F69A4F007500E9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -205,6 +275,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		460B555E2509606F003D49FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 79E670B624F69A4F007500E9 /* BeachMapMobile */;
+			targetProxy = 460B555D2509606F003D49FC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		79E670C024F69A4F007500E9 /* Main.storyboard */ = {
@@ -226,6 +304,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		460B55602509606F003D49FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BeachMapMobileTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.macenajean.BeachMapMobileTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BeachMapMobile.app/BeachMapMobile";
+			};
+			name = Debug;
+		};
+		460B55612509606F003D49FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BeachMapMobileTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.macenajean.BeachMapMobileTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BeachMapMobile.app/BeachMapMobile";
+			};
+			name = Release;
+		};
 		79E670C924F69A52007500E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -377,6 +495,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		460B555F2509606F003D49FC /* Build configuration list for PBXNativeTarget "BeachMapMobileTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				460B55602509606F003D49FC /* Debug */,
+				460B55612509606F003D49FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		79E670B224F69A4F007500E9 /* Build configuration list for PBXProject "BeachMapMobile" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
