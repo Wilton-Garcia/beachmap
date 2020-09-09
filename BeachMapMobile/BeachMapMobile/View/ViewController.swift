@@ -56,7 +56,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
         let cell = tableView.dequeueReusableCell(withIdentifier: "customcell") as! ProjetosTableViewCell
         
         let projeto = projetos[indexPath.row]
-        let stringResponsaveisProjetosFormatada = formataStringResponsaveis(responsaveis: projeto.responsaveis)
+        let stringResponsaveisProjetosFormatada = FormatarDadosDeProjeto().formataResponsaveis(responsaveis: projeto.responsaveis)
         
         cell.Nome.text = projeto.nome
         cell.Escritorio.text = projeto.escritorio
@@ -85,23 +85,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
         
     }
     
-    
-    func formataStringResponsaveis(responsaveis: String) -> NSAttributedString {
-        
-        let tamanhoFonte =  UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.phone ? CGFloat(16) : CGFloat(19)
 
-        let boldText = "Responsáveis: "
-        let attributsBold = [NSAttributedString.Key.font : UIFont.systemFont(ofSize: tamanhoFonte, weight: .bold)]
-        let attributsNormal = [NSAttributedString.Key.font : UIFont.systemFont(ofSize: tamanhoFonte, weight: .regular)]
-        let attributedString = NSMutableAttributedString(string: responsaveis, attributes:attributsNormal)
-        let boldStringPart = NSMutableAttributedString(string: boldText, attributes:attributsBold)
-        
-        boldStringPart.append(attributedString)
-        
-        return boldStringPart
-        
-    }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //print(indexPath.row)
         let projetoSelecionado = projetos[indexPath.row]

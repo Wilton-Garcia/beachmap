@@ -24,51 +24,24 @@ class DetalhesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        carregaDadosNaTelaDeDetalhes()
+    }
+    
+    func carregaDadosNaTelaDeDetalhes(){
         
         if let  projeto = projetoSelecionado {
             nomeProjetoLbl.text = projeto.nome
-            statusLbl.text = retornaStatus(status: projeto.status)
+            statusLbl.text = FormatarDadosDeProjeto().retornaStatus(status: projeto.status)
             escritorioLbl.text = projeto.escritorio
-            dataUltimaAtualizacaoLbl.text = formataData(data: projeto.dataUltimaAtualizacao)
+            dataUltimaAtualizacaoLbl.text = FormatarDadosDeProjeto().formataData(data: projeto.dataUltimaAtualizacao)
             descricaoLbl.text = projeto.descricao
             desafiosLbl.text = projeto.desafios
             techStackLbl.text = projeto.techStack
-            oportunidadesLbl.text = retornaOportunidades(oportunidades: projeto.oportunidade)
+            oportunidadesLbl.text = FormatarDadosDeProjeto().retornaOportunidades(oportunidades: projeto.oportunidade)
             responsaveisLbl.text = projeto.responsaveis
         }
-    }
-    
-    func retornaStatus(status: String) -> String {
-        
-        switch status {
-        case "emProgresso":
-            return "Em Progresso"
-        case "Rascunho":
-            return "Rascunho"
-        case "Deletado":
-            return "Deletado"
-        case "Parado":
-            return "Parado"
-        case "Concluido":
-            return "Concluído"
-        case "NaoIniciado":
-            return "Não Iniciado"
-        default:
-            return "Sem status"
-        }
         
     }
     
-    func retornaOportunidades(oportunidades: [String]) -> String {
-        var oportunidadeRetorno = ""
-        
-        for oportunidade in oportunidades {
-            oportunidadeRetorno += "* " + oportunidade + "\n"
-        }
-        return oportunidadeRetorno
-    }
-    
-    func formataData(data:String) -> String {
-        return "Data da última atualização: \(data)"
-    }
+
 }

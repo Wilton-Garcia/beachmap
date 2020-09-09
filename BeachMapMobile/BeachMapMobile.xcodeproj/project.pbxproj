@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		460B555B2509606F003D49FC /* BeachMapMobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460B555A2509606F003D49FC /* BeachMapMobileTests.swift */; };
+		46183DC425096CA500E29F7B /* FormatarDadosDeProjeto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46183DC325096CA500E29F7B /* FormatarDadosDeProjeto.swift */; };
 		46A9867C2508109E0086835E /* ProjetosAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A9867B2508109E0086835E /* ProjetosAPI.swift */; };
 		4D597D4A24F6A40000BD3906 /* Projeto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D597D4924F6A40000BD3906 /* Projeto.swift */; };
 		4D597D4C24F6A6B500BD3906 /* ProjetosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D597D4B24F6A6B500BD3906 /* ProjetosTableViewCell.swift */; };
@@ -37,6 +38,7 @@
 		460B55582509606F003D49FC /* BeachMapMobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeachMapMobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		460B555A2509606F003D49FC /* BeachMapMobileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeachMapMobileTests.swift; sourceTree = "<group>"; };
 		460B555C2509606F003D49FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46183DC325096CA500E29F7B /* FormatarDadosDeProjeto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatarDadosDeProjeto.swift; sourceTree = "<group>"; };
 		46A9867B2508109E0086835E /* ProjetosAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjetosAPI.swift; sourceTree = "<group>"; };
 		4D597D4924F6A40000BD3906 /* Projeto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Projeto.swift; sourceTree = "<group>"; };
 		4D597D4B24F6A6B500BD3906 /* ProjetosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjetosTableViewCell.swift; sourceTree = "<group>"; };
@@ -79,6 +81,32 @@
 				460B555C2509606F003D49FC /* Info.plist */,
 			);
 			path = BeachMapMobileTests;
+			sourceTree = "<group>";
+		};
+		46183DC025096BEE00E29F7B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				79E670BE24F69A4F007500E9 /* ViewController.swift */,
+				4D597D4B24F6A6B500BD3906 /* ProjetosTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		46183DC125096BF700E29F7B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4D8486F725012EE500CFBCEE /* DetalhesViewController.swift */,
+				46183DC225096C3A00E29F7B /* Helper */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		46183DC225096C3A00E29F7B /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				46183DC325096CA500E29F7B /* FormatarDadosDeProjeto.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		46A9867D250810B90086835E /* Dados */ = {
@@ -137,13 +165,12 @@
 		79E670B924F69A4F007500E9 /* BeachMapMobile */ = {
 			isa = PBXGroup;
 			children = (
-				46A9867D250810B90086835E /* Dados */,
 				4D597D4824F6A3DC00BD3906 /* Models */,
+				46183DC025096BEE00E29F7B /* View */,
+				46183DC125096BF700E29F7B /* Controller */,
+				46A9867D250810B90086835E /* Dados */,
 				79E670BA24F69A4F007500E9 /* AppDelegate.swift */,
 				79E670BC24F69A4F007500E9 /* SceneDelegate.swift */,
-				79E670BE24F69A4F007500E9 /* ViewController.swift */,
-				4D597D4B24F6A6B500BD3906 /* ProjetosTableViewCell.swift */,
-				4D8486F725012EE500CFBCEE /* DetalhesViewController.swift */,
 				79E670C024F69A4F007500E9 /* Main.storyboard */,
 				79E670C324F69A52007500E9 /* Assets.xcassets */,
 				79E670C524F69A52007500E9 /* LaunchScreen.storyboard */,
@@ -266,6 +293,7 @@
 				4D597D4A24F6A40000BD3906 /* Projeto.swift in Sources */,
 				4D8486F825012EE500CFBCEE /* DetalhesViewController.swift in Sources */,
 				796456322507BDBF001431D3 /* Status.swift in Sources */,
+				46183DC425096CA500E29F7B /* FormatarDadosDeProjeto.swift in Sources */,
 				4D597D4C24F6A6B500BD3906 /* ProjetosTableViewCell.swift in Sources */,
 				796456342507BEBE001431D3 /* ProjetosDAO.swift in Sources */,
 				79E670BB24F69A4F007500E9 /* AppDelegate.swift in Sources */,

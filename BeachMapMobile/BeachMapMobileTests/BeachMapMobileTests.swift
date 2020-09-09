@@ -29,17 +29,17 @@ class BeachMapMobileTests: XCTestCase {
     }
     
     func testValidarFormatoDataUltimaAtualizacao(){
-        let dataUltimaAtualizacao = DetalhesViewController().formataData(data: projetos[0].dataUltimaAtualizacao)
+        let dataUltimaAtualizacao = FormatarDadosDeProjeto().formataData(data: projetos[0].dataUltimaAtualizacao)
         XCTAssertEqual("Data da última atualização: 10/06/2020", dataUltimaAtualizacao)
     }
     
     func testValidarMensagemDoStatusRetornado(){
-        let retornoDoStatus = DetalhesViewController().retornaStatus(status: projetos[0].status)
+        let retornoDoStatus = FormatarDadosDeProjeto().retornaStatus(status: projetos[0].status)
         XCTAssertEqual("Em Progresso", retornoDoStatus)
     }
     
     func testValidarFormatoDeOportunidades(){
-        let oportunidades = DetalhesViewController().retornaOportunidades(oportunidades: projetos[0].oportunidade)
+        let oportunidades = FormatarDadosDeProjeto().retornaOportunidades(oportunidades: projetos[0].oportunidade)
         XCTAssertEqual("* B.A.\n* XD\n", oportunidades)
     }
 
