@@ -27,13 +27,13 @@ class DetalhesViewController: UIViewController {
         
         if let  projeto = projetoSelecionado {
             nomeProjetoLbl.text = projeto.nome
-            statusLbl.text = projeto.status.rawValue
+            statusLbl.text = projeto.status
             escritorioLbl.text = projeto.escritorio
             dataUltimaAtualizacaoLbl.text = formataData(data: projeto.dataUltimaAtualizacao)
             descricaoLbl.text = projeto.descricao
             desafiosLbl.text = projeto.desafios
             techStackLbl.text = projeto.techStack
-            oportunidadesLbl.text = retornaOportunidades(oportunidades: projeto.oportunidades)
+            oportunidadesLbl.text = projeto.oportunidade[0]
             responsaveisLbl.text = projeto.responsaveis
         }
     }

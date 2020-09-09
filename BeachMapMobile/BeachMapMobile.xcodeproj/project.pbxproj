@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46A9867C2508109E0086835E /* ProjetosAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A9867B2508109E0086835E /* ProjetosAPI.swift */; };
 		4D597D4A24F6A40000BD3906 /* Projeto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D597D4924F6A40000BD3906 /* Projeto.swift */; };
 		4D597D4C24F6A6B500BD3906 /* ProjetosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D597D4B24F6A6B500BD3906 /* ProjetosTableViewCell.swift */; };
 		4D8486F825012EE500CFBCEE /* DetalhesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8486F725012EE500CFBCEE /* DetalhesViewController.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		46A9867B2508109E0086835E /* ProjetosAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjetosAPI.swift; sourceTree = "<group>"; };
 		4D597D4924F6A40000BD3906 /* Projeto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Projeto.swift; sourceTree = "<group>"; };
 		4D597D4B24F6A6B500BD3906 /* ProjetosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjetosTableViewCell.swift; sourceTree = "<group>"; };
 		4D8486F725012EE500CFBCEE /* DetalhesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +51,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		46A9867D250810B90086835E /* Dados */ = {
+			isa = PBXGroup;
+			children = (
+				46A9867E250810C40086835E /* API */,
+				796456352507BECE001431D3 /* DAO */,
+			);
+			path = Dados;
+			sourceTree = "<group>";
+		};
+		46A9867E250810C40086835E /* API */ = {
+			isa = PBXGroup;
+			children = (
+				46A9867B2508109E0086835E /* ProjetosAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		4D597D4824F6A3DC00BD3906 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,7 +105,7 @@
 		79E670B924F69A4F007500E9 /* BeachMapMobile */ = {
 			isa = PBXGroup;
 			children = (
-				796456352507BECE001431D3 /* DAO */,
+				46A9867D250810B90086835E /* Dados */,
 				4D597D4824F6A3DC00BD3906 /* Models */,
 				79E670BA24F69A4F007500E9 /* AppDelegate.swift */,
 				79E670BC24F69A4F007500E9 /* SceneDelegate.swift */,
@@ -172,6 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46A9867C2508109E0086835E /* ProjetosAPI.swift in Sources */,
 				79E670BF24F69A4F007500E9 /* ViewController.swift in Sources */,
 				4D597D4A24F6A40000BD3906 /* Projeto.swift in Sources */,
 				4D8486F825012EE500CFBCEE /* DetalhesViewController.swift in Sources */,
