@@ -35,6 +35,12 @@ class ViewController: UIViewController, ProjetosAPIDelegate{
         self.projetos = projetos
     }
   
+    @IBAction func CriaProjeto(_ sender: UIBarButtonItem) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(identifier: "CriaProjeto")
+        self.navigationController?.pushViewController(controller , animated: true)
+    }
+    
     func AdicionaNavBar () {
 
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
@@ -48,7 +54,6 @@ class ViewController: UIViewController, ProjetosAPIDelegate{
 extension ViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("\(projetos.count) Teste")
         return projetos.count
     }
     

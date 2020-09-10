@@ -12,6 +12,7 @@
 		46A9867C2508109E0086835E /* ProjetosAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A9867B2508109E0086835E /* ProjetosAPI.swift */; };
 		4D597D4A24F6A40000BD3906 /* Projeto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D597D4924F6A40000BD3906 /* Projeto.swift */; };
 		4D597D4C24F6A6B500BD3906 /* ProjetosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D597D4B24F6A6B500BD3906 /* ProjetosTableViewCell.swift */; };
+		4D5FF6F2250A62BA00C79D67 /* CriarProjetoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5FF6F1250A62BA00C79D67 /* CriarProjetoViewController.swift */; };
 		4D8486F825012EE500CFBCEE /* DetalhesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8486F725012EE500CFBCEE /* DetalhesViewController.swift */; };
 		796456302507BCEE001431D3 /* Oportunidades.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7964562F2507BCEE001431D3 /* Oportunidades.swift */; };
 		796456322507BDBF001431D3 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796456312507BDBF001431D3 /* Status.swift */; };
@@ -42,6 +43,7 @@
 		46A9867B2508109E0086835E /* ProjetosAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjetosAPI.swift; sourceTree = "<group>"; };
 		4D597D4924F6A40000BD3906 /* Projeto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Projeto.swift; sourceTree = "<group>"; };
 		4D597D4B24F6A6B500BD3906 /* ProjetosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjetosTableViewCell.swift; sourceTree = "<group>"; };
+		4D5FF6F1250A62BA00C79D67 /* CriarProjetoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriarProjetoViewController.swift; sourceTree = "<group>"; };
 		4D8486F725012EE500CFBCEE /* DetalhesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesViewController.swift; sourceTree = "<group>"; };
 		7964562F2507BCEE001431D3 /* Oportunidades.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Oportunidades.swift; sourceTree = "<group>"; };
 		796456312507BDBF001431D3 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			children = (
 				79E670BE24F69A4F007500E9 /* ViewController.swift */,
 				4D597D4B24F6A6B500BD3906 /* ProjetosTableViewCell.swift */,
+				4D5FF6F1250A62BA00C79D67 /* CriarProjetoViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D5FF6F2250A62BA00C79D67 /* CriarProjetoViewController.swift in Sources */,
 				46A9867C2508109E0086835E /* ProjetosAPI.swift in Sources */,
 				79E670BF24F69A4F007500E9 /* ViewController.swift in Sources */,
 				4D597D4A24F6A40000BD3906 /* Projeto.swift in Sources */,
