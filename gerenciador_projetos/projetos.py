@@ -1,5 +1,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel, constr
+from typing import List
+
 app = FastAPI()
 
 class Projeto(BaseModel):
@@ -7,10 +9,11 @@ class Projeto(BaseModel):
     nome: constr(min_length=3, max_length=100)
     escritorio: str
     status: str
+    dataUltimaAtualizacao: str
     descricao: constr(min_length=5, max_length=4000)
     desafios: str
     techStack: str
-    oportunidades: str
+    oportunidades: List[str]
     responsaveis: str
     
 

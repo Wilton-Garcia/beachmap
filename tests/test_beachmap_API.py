@@ -7,10 +7,11 @@ projeto_generico = {
     "nome": "Beach Map",
     "escritorio": "Belo Horizonte",
     "status": "Em Progresso",
+    "dataUltimaAtualizacao": "01/01/2020",
     "descricao": "Um projeto muito legal",
     "desafios": "Aprender Swift",
     "techStack": "Swift Python",
-    "oportunidades": "XD",
+    "oportunidades": ["XD","DEV"],
     "responsaveis": "vitor.pires@email.com"
 }
 
