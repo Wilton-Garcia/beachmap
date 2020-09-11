@@ -1,7 +1,9 @@
 from fastapi import FastAPI
-
-
+from pydantic import BaseModel, constr
 app = FastAPI()
+
+class Projeto(BaseModel):
+    nome_projeto: constr(min_length=3, max_length=100)
 
 PROJETOS = [
     {
@@ -45,3 +47,7 @@ PROJETOS = [
 @app.get("/projetos")
 def listar_projetos():
     return PROJETOS
+
+@app.post("/projeto")
+def adicionar_projeto(projeto: Projeto):
+    pass
