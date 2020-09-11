@@ -11,7 +11,7 @@ projeto_generico = {
     "descricao": "Um projeto muito legal",
     "desafios": "Aprender Swift",
     "techStack": "Swift Python",
-    "oportunidades": ["XD","DEV"],
+    "oportunidade": ["XD","DEV"],
     "responsaveis": "vitor.pires@email.com"
 }
 

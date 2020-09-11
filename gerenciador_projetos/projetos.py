@@ -13,7 +13,7 @@ class Projeto(BaseModel):
     descricao: constr(min_length=5, max_length=4000)
     desafios: str
     techStack: str
-    oportunidades: List[str]
+    oportunidade: List[str]
     responsaveis: str
     
 
