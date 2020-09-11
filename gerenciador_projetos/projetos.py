@@ -3,7 +3,18 @@ from pydantic import BaseModel, constr
 app = FastAPI()
 
 class Projeto(BaseModel):
-    nome_projeto: constr(min_length=3, max_length=100)
+    id: int
+    nome: constr(min_length=3, max_length=100)
+    escritorio: str
+    status: str
+    descricao: constr(min_length=5, max_length=4000)
+    desafios: str
+    techStack: str
+    oportunidades: str
+    responsaveis: str
+    
+
+
 
 PROJETOS = [
     {
@@ -48,6 +59,11 @@ PROJETOS = [
 def listar_projetos():
     return PROJETOS
 
-@app.post("/projeto")
+@app.post("/projeto", response_model=Projeto, status_code=201)
 def adicionar_projeto(projeto: Projeto):
-    pass
+    novo_projeto = projeto.dict()
+    PROJETOS.append(novo_projeto)
+    return novo_projeto
+
+
+
