@@ -26,6 +26,7 @@ class CriarProjetoViewController: UIViewController {
     }
     
     func formataUI(){
+        adicionaTituloNaPagina()
         aplicaLaytoutNoTexView(textView: descricacao)
         aplicaLaytoutNoTexView(textView: oportunidades)
         aplicaLaytoutNoTexView(textView: desafios)
@@ -39,4 +40,9 @@ class CriarProjetoViewController: UIViewController {
         textView.layer.cornerRadius = 5
         
     }
+    
+    func adicionaTituloNaPagina(){
+        navigationItem.title = "Cadastro de Novo Projeto"
+    }
+    
 }
