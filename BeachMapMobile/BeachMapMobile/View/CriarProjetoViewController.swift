@@ -19,10 +19,16 @@ class CriarProjetoViewController: UIViewController {
     @IBOutlet weak var statusDoProjeto: UITextField!
     @IBOutlet weak var escritorio: UITextField!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         formataUI()
+    }
+    
+    @IBAction func cadastraProjetoBtn(_ sender: UIButton) {
+        
+        ProjetosAPI().cadastraProjeto()
+        
+        navigationController?.popViewController(animated: true)
     }
     
     func formataUI(){

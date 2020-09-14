@@ -22,15 +22,18 @@ class ViewController: UIViewController, ProjetosAPIDelegate{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         projetosAPI.delegate = self
-        projetosAPI.getData()
         tabelaProjetos.delegate = self
         tabelaProjetos.dataSource = self
         AdicionaNavBar()
-         self.tabelaProjetos.reloadData()
+        self.tabelaProjetos.reloadData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        projetosAPI.getData()
+        tabelaProjetos.reloadData()
+    }
     func atualizarProjeto(projetos: [Projeto]) {
         self.projetos = projetos
     }
