@@ -34,7 +34,7 @@ class CriarProjetoViewController: UIViewController {
         guard let techStack = techStack.text else { return }
         guard let oportunidades = oportunidades.text else { return }
         guard let status = statusDoProjeto.text else { return }
-        let ultimaAtualizacao = "10/10/2020"
+        let ultimaAtualizacao = pegarDataDoDia()
         
         let projeto = Projeto(id: 50, nome: nomeProjeto, escritorio: escritorio, descricao: descricao, responsaveis: responsaveis, desafios: desafios, techStack: techStack, oportunidades: [oportunidades], status: status, dataUltimaAtualizacao: ultimaAtualizacao)
         
@@ -62,5 +62,14 @@ class CriarProjetoViewController: UIViewController {
     func adicionaTituloNaPagina(){
         navigationItem.title = "Cadastro de Novo Projeto"
     }
+    
+    func pegarDataDoDia() -> String{
+        let date = Date()
+        let format = DateFormatter()
+        format.dateFormat = "dd/MM/yyyy"
+        let formattedDate = format.string(from: date)
+        return formattedDate
+    }
+    
     
 }
