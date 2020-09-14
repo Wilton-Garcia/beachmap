@@ -1,1 +1,0 @@
-uvicorn --reload projetos:app
