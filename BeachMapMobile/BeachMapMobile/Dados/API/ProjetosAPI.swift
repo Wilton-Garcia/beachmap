@@ -43,47 +43,53 @@ struct ProjetosAPI {
     }
     
     
-    func cadastraProjeto() {
+    func cadastraProjeto(projeto: Projeto) {
+        
         let urlString = URL(string: "\(urlPadrao)/projeto")!
-               
-               let json = [
-                   "id": 8,
-                    "nome": "Beach Map 88 - Testando POST",
-                   "escritorio": "String",
-                   "descricao": "String",
-                   "desafios": "String",
-                   "techStack": "String",
-                   "oportunidade": ["String", "String"],
-                   "status": "String",
-                   "dataUltimaAtualizacao": "String",
-                   "responsaveis": "String"
-                   ] as [String : Any]
-           
-                do {
-                   let jsonData = try JSONSerialization.data(withJSONObject: json, options: [])
-                   
-                   var request = URLRequest(url: urlString)
-                   request.httpMethod = "POST"
-                   request.httpBody = jsonData
-                   request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-                   
-                   let task = URLSession.shared.uploadTask(with: request, from: jsonData) {
-                       data, response, error in
-                       
-                       if let data = data, let dataString = String(data: data, encoding: .utf8) {
-                           print(dataString)
-                       }
-                       if let httpResponse = response as? HTTPURLResponse {
-                           print(httpResponse.statusCode)
-                       }
-                   }
-                   task.resume()
-                   
-                } catch {
-                   print("Erro")
-                   
-               }
-           }
-           
+        
+        /*
+         let json = [
+         "id": 8,
+         "nome": "Beach Map 88 - Testando POST",
+         "escritorio": "String",
+         "descricao": "String",
+         "desafios": "String",
+         "techStack": "String",
+         "oportunidade": ["String", "String"],
+         "status": "String",
+         "dataUltimaAtualizacao": "String",
+         "responsaveis": "String"
+         ] as [String : Any]
+         */
+        
+        let encode = JSONEncoder()
+        
+        do {
+            let jsonData = try encode.encode(projeto)
+            //let jsonData = try JSONSerialization.data(withJSONObject: json, options: [])
+            
+            var request = URLRequest(url: urlString)
+            request.httpMethod = "POST"
+            request.httpBody = jsonData
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            
+            let task = URLSession.shared.uploadTask(with: request, from: jsonData) {
+                data, response, error in
+                
+                if let data = data, let dataString = String(data: data, encoding: .utf8) {
+                    print(dataString)
+                }
+                if let httpResponse = response as? HTTPURLResponse {
+                    print(httpResponse.statusCode)
+                }
+            }
+            task.resume()
+            
+        } catch {
+            print("Erro")
+            
+        }
     }
+    
+}
 
