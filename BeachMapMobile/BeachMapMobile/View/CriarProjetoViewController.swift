@@ -9,7 +9,7 @@
 import UIKit
 
 class CriarProjetoViewController: UIViewController {
-
+    
     @IBOutlet weak var oportunidades: UITextView!
     @IBOutlet weak var desafios: UITextView!
     @IBOutlet weak var techStack: UITextView!
@@ -19,11 +19,18 @@ class CriarProjetoViewController: UIViewController {
     @IBOutlet weak var statusDoProjeto: UITextField!
     @IBOutlet weak var escritorio: UITextField!
     
+    @IBOutlet weak var statusPickerView: UIPickerView!
+    
+    let status = ["Em Andamento", "Cancelado", "Rascunho"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        criaPickerView()
+        removePickerView()
         formataUI()
     }
-    
+
     @IBAction func cadastraProjetoBtn(_ sender: UIButton) {
         
         guard let nomeProjeto = nomeProjeto.text else { return }
@@ -71,5 +78,46 @@ class CriarProjetoViewController: UIViewController {
         return formattedDate
     }
     
+    
+    
+      func criaPickerView() {
+          let pickerView = UIPickerView()
+          pickerView.delegate = self
+             statusDoProjeto.inputView = pickerView
+      }
+    
+        func removePickerView() {
+        let toolBar = UIToolbar()
+        toolBar.sizeToFit()
+        
+        let button = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(self.action))
+        toolBar.setItems([button], animated: true)
+        toolBar.isUserInteractionEnabled = true
+        statusDoProjeto.inputAccessoryView = toolBar
+    }
+    
+    @objc func action() {
+       view.endEditing(true)
+    }
+    
+}
+
+
+extension CriarProjetoViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return status.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return status[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        statusDoProjeto.text = status[row]
+    }
     
 }
