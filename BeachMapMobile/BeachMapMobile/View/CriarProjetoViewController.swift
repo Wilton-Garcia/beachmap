@@ -23,6 +23,7 @@ class CriarProjetoViewController: UIViewController {
     
     let status = ["Em Andamento", "Cancelado", "Rascunho"]
     let escritoriosLista = ["Belo Horizonte","Porto Alegre","Recife", "São Paulo"]
+    let oportunidadesLista = ["BA", "DEV", "QA", "PM", "XD"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
