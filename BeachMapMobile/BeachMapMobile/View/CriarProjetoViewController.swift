@@ -22,6 +22,7 @@ class CriarProjetoViewController: UIViewController {
     @IBOutlet weak var statusPickerView: UIPickerView!
     
     let status = ["Em Andamento", "Cancelado", "Rascunho"]
+    let escritoriosLista = ["Belo Horizonte","Porto Alegre","Recife", "São Paulo"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +31,7 @@ class CriarProjetoViewController: UIViewController {
         removePickerView()
         formataUI()
     }
-
+    
     @IBAction func cadastraProjetoBtn(_ sender: UIButton) {
         
         guard let nomeProjeto = nomeProjeto.text else { return }
@@ -80,24 +81,26 @@ class CriarProjetoViewController: UIViewController {
     
     
     
-      func criaPickerView() {
-          let pickerView = UIPickerView()
-          pickerView.delegate = self
-             statusDoProjeto.inputView = pickerView
-      }
+    func criaPickerView() {
+        let pickerView = UIPickerView()
+        //let pickerViewEscritorio = UIPickerView()
+        pickerView.delegate = self
+        statusDoProjeto.inputView = pickerView
+        escritorio.inputView = pickerView
+    }
     
-        func removePickerView() {
+    func removePickerView() {
         let toolBar = UIToolbar()
         toolBar.sizeToFit()
-        
         let button = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(self.action))
         toolBar.setItems([button], animated: true)
         toolBar.isUserInteractionEnabled = true
         statusDoProjeto.inputAccessoryView = toolBar
+        escritorio.inputAccessoryView = toolBar
     }
     
     @objc func action() {
-       view.endEditing(true)
+        view.endEditing(true)
     }
     
 }
@@ -109,15 +112,25 @@ extension CriarProjetoViewController: UIPickerViewDelegate, UIPickerViewDataSour
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        if escritorio.isFirstResponder{
+            return escritoriosLista.count
+        }
         return status.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if escritorio.isFirstResponder{
+            return escritoriosLista[row]
+        }
         return status[row]
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        statusDoProjeto.text = status[row]
+        if escritorio.isFirstResponder{
+            escritorio.text = escritoriosLista[row]
+        }else{
+            statusDoProjeto.text = status[row]
+        }
     }
     
 }

@@ -17,8 +17,6 @@ class Projeto(BaseModel):
     responsaveis: str
     
 
-
-
 PROJETOS = [
     {
         "id": 1,
