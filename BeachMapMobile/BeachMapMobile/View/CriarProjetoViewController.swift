@@ -20,10 +20,13 @@ class CriarProjetoViewController: UIViewController {
     @IBOutlet weak var escritorio: UITextField!
     
     @IBOutlet weak var statusPickerView: UIPickerView!
+   
+    @IBOutlet weak var qaButtonOutlet: UIButton!
     
     let status = ["Em Andamento", "Cancelado", "Rascunho"]
     let escritoriosLista = ["Belo Horizonte","Porto Alegre","Recife", "São Paulo"]
     let oportunidadesLista = ["BA", "DEV", "QA", "PM", "XD"]
+    var oportunidadesSelecionadas = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +34,28 @@ class CriarProjetoViewController: UIViewController {
         criaPickerView()
         removePickerView()
         formataUI()
+        
+        
     }
+
+    @IBAction func qaButtonAction(_ sender: UIButton) {
+        
+        selecionaOportunidade(button: qaButtonOutlet)
+        
+    }
+    
+    func selecionaOportunidade(button: UIButton) {
+        
+        if button.backgroundColor == .green {
+            button.backgroundColor = .none
+          
+        } else {
+            button.backgroundColor = .green
+            oportunidadesSelecionadas.append((button.titleLabel?.text)!)
+        }
+        print(oportunidadesSelecionadas)
+    }
+    
     
     @IBAction func cadastraProjetoBtn(_ sender: UIButton) {
         
@@ -84,7 +108,6 @@ class CriarProjetoViewController: UIViewController {
     
     func criaPickerView() {
         let pickerView = UIPickerView()
-        //let pickerViewEscritorio = UIPickerView()
         pickerView.delegate = self
         statusDoProjeto.inputView = pickerView
         escritorio.inputView = pickerView
