@@ -1,6 +1,6 @@
 from starlette.testclient import TestClient
 from starlette.status import HTTP_200_OK
-from gerenciador_projetos.projetos import app
+from API.API_Projetos import app
 
 projeto_generico = {
     "id": 0,

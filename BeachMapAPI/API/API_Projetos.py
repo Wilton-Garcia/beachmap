@@ -1,5 +1,5 @@
 import psycopg2
-from gerenciador_projetos.Dados_Projeto import Dados_Projeto
+from API.Dados_Projeto import Dados_Projeto
 from fastapi import FastAPI
 from Modelos.Projeto import Projeto
 
