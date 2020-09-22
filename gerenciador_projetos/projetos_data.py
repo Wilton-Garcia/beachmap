@@ -1,26 +1,4 @@
-import psycopg2
-from fastapi import FastAPI
-from pydantic import BaseModel, constr
-from typing import List
-
-
-app = FastAPI()
-
-class Projeto(BaseModel):
-    id: int
-    nome: constr(min_length=3, max_length=100)
-    escritorio: str
-    status: str
-    dataUltimaAtualizacao: str
-    descricao: constr(min_length=5, max_length=4000)
-    desafios: str
-    techStack: str
-    oportunidade: List[str]
-    responsaveis: str
-    
- 
-PROJETOS = [
-    {
+  {
         "id": 1,
         "nome": "Beach Map",
         "escritorio": "BH",
@@ -56,22 +34,3 @@ PROJETOS = [
         "dataUltimaAtualizacao":"01/01/2001",
         "responsaveis": "vitor.pires@email.com"
     },
-]
-
-@app.get("/projetos")
-def listar_projetos():
-    conenxaoAoBanco = psycopg2.connect(host='localhost', database='beachmapdb',
-    user='postgres', password='1995')
-    cur = conenxaoAoBanco.cursor()
-    cur.execute('select * from projetos')
-    recset = cur.fetchall()
-    json_data=[]
-    row_headers=[x[0] for x in cur.description]
-    for rec in recset:
-        json_data.append(dict(zip(row_headers,rec)))
-    conenxaoAoBanco.close()
-    return json_data
-
-
-
-
