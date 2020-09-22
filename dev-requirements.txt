@@ -1,3 +1,5 @@
--r requirements.txt
+-r BeachMapAPI/requirements.txt
+psycopg2==2.8.6
+psycopg2-binary==2.8.6
 pytest==5.3.2
 httpie==1.0.3
